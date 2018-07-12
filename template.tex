@@ -1,0 +1,658 @@
+%  LaTeX support: latex@mdpi.com 
+%  In case you need support, please attach all files that are necessary for compiling as well as the log file, and specify the details of your LaTeX setup (which operating system and LaTeX version / tools you are using).
+
+% You need to save the "mdpi.cls" and "mdpi.bst" files into the same folder as this template file.
+
+%=================================================================
+\documentclass[sustainability,article,submit,moreauthors,pdftex,10pt,a4paper]{Definitions/mdpi} 
+
+% If you would like to post an early version of this manuscript as a preprint, you may use preprint as the journal and change 'submit' to 'accept'. The document class line would be, e.g. \documentclass[preprints,article,accept,moreauthors,pdftex,10pt,a4paper]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
+
+%
+%--------------------
+% Class Options:
+%--------------------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% acoustics, actuators, addictions, admsci, aerospace, agriculture, agronomy, algorithms, animals, antibiotics, antibodies, antioxidants, applsci, arts, asi, atmosphere, atoms, axioms, batteries, bdcc, behavsci, beverages, bioengineering, biology, biomedicines, biomimetics, biomolecules, biosensors, brainsci, buildings, carbon, cancers, catalysts, cells, ceramics, challenges, chemengineering, chemosensors, children, cleantechnol, climate, clockssleep, cmd, coatings, colloids, computation, computers, condensedmatter, cosmetics, cryptography, crystals, cybersecurity, data, dentistry, designs, diagnostics, dairy, diseases, diversity, drones, econometrics, economies, education, electrochem, electrochemistry, electronics, energies, entropy, environments, epigenomes, est, fermentation, fibers, fire, fishes, fluids, foods, forecasting, forests, fractalfract, futureinternet, galaxies, games, gastrointestdisord, gels, genealogy, genes, geohazards, geosciences, geriatrics, hazardousmatters, healthcare, heritage, highthroughput, horticulturae, humanities, hydrology, informatics, information, infrastructures, inorganics, insects, instruments, ijerph, ijfs, ijms, ijgi, ijtpp, inventions, j, jcdd, jcm, jcs, jdb, jfb, jfmk, jimaging, jof, jintelligence, jlpea, jmmp, jmse, jpm, jrfm, jsan, land, languages, laws, life, literature, logistics, lubricants, machines, magnetochemistry, make, marinedrugs, materials, mathematics, mca, medsci, medicina, medicines, membranes, metabolites, metals, microarrays, micromachines, microorganisms, minerals, modelling, molbank, molecules, mps, mti, nanomaterials, ncrna, neonatalscreening, neuroglia, nitrogen, nutrients, ohbm, particles, pathogens, pharmaceuticals, pharmaceutics, pharmacy, philosophies, photonics, plants, plasma, polymers, polysaccharides, proceedings, processes, proteomes, publications, quaternary, qubs, reactions, recycling, religions, remotesensing, reports, resources, risks, robotics, safety, sci, scipharm, sensors, separations, sexes, sinusitis, smartcities, socsci, societies, soilsystems, sports, standards, stats, surfaces, surgeries, sustainability, symmetry, systems, technologies, toxics, toxins, tropicalmed, universe, urbansci, vaccines, vehicles, vetsci, vibration, viruses, vision, water, wem, wevj
+%---------
+% article
+%---------
+% The default type of manuscript is article, but can be replaced by: 
+% abstract, addendum, article, benchmark, book, bookreview, briefreport, casereport, changes, comment, commentary, communication, conceptpaper, correction, conferenceproceedings, conferencereport, expressionofconcern, meetingreport, creative, datadescriptor, discussion, editorial, essay, erratum, hypothesis, interestingimages, letter, meetingreport, newbookreceived, opinion, obituary, projectreport, reply, reprint, retraction, review, perspective, protocol, shortnote, supfile, technicalnote, viewpoint
+% supfile = supplementary materials
+% protocol: If you are preparing a "Protocol" paper, please refer to http://www.mdpi.com/journal/mps/instructions for details on its expected structure and content.
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g. the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. If eps figures are used, remove the option pdftex and use LaTeX and dvi2pdf.
+
+%=================================================================
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{xx}
+\issuenum{1}
+\articlenumber{1}
+\pubyear{2018}
+\copyrightyear{2018}
+\externaleditor{Academic Editor: name}
+\history{Received: date; Accepted: date; Published: date}
+%\updates{yes} % If there is an update available, un-comment this line
+
+%------------------------------------------------------------------
+% The following line should be uncommented if the LaTeX file is uploaded to arXiv.org
+%\pdfoutput=1
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, calc, indentfirst, fancyhdr, graphicx, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, amsthm, hyphenat, natbib, hyperref, footmisc, geometry, caption, url, mdframed, tabto, soul, multirow, microtype, tikz
+
+%=================================================================
+%% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Relationships between individual characteristics and real walking durations from departures to transit stations}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-3792-0594} % Add \orcidA{} behind the author's name
+%\newcommand{\orcidauthorB}{0000-0000-000-000X} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Qi Chen $^{1,\dagger,\ddagger,}$\orcidA{}, Siting Chen $^{2,\dagger,}$, Go Higuchi $^{3,\dagger,}$, and Shichen Zhao $^{4,}$*}
+
+% Authors, for metadata in PDF
+\AuthorNames{Firstname Lastname, Firstname Lastname and Firstname Lastname}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Doctor Candidate, Graduate School of Human-Environment Studies, Kyushu University, Japan; chenqi.clever@gmail.com\\
+$^{2}$ \quad Graduate Student, Graduate School of Human-Environment Studies, Kyushu University, Japan; miche\_chen@yahoo.com\\
+$^{3}$ \quad Graduate Student, Graduate School of Human-Environment Studies, Kyushu University, Japan; goooooooooo217@gmail.com\\
+$^{4}$ \quad Professor, Dr. Eng. Faculty of Human-Environment Studies, Kyushu University, Japan; zhao@arch.kyushu-u.ac.jp
+}
+
+% Contact information of the corresponding author
+\corres{Correspondence: zhao@arch.kyushu-u.ac.jp; Tel.: +x-xxx-xxx-xxxx}
+
+% Current address and/or shared authorship
+\firstnote{Current address: Graduate School of Human-Environment Studies, Kyushu University, Japan} 
+\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+% Simple summary
+%\simplesumm{}
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{Walking duration is one of the determinants in choosing to use rail transit. People with different individual characteristics are supposed to have different willingness on walking duration. This study examines the prevalence of walking durations for different individual characteristics among the residents in Fukuoka of Japan. Walking duration, however, represents the distance between departure and station, it is directly determined by the location of departure but not the individual characteristics. To examine this prevalence, the study treats the behavior that walking to rail transit as a travel choice result. For a given walking duration, people with different individual characteristics are supposed to have different willingness in deciding whether to use rail transit. Based on this supposition, the research question can be converted into a binary classification problem, of which the classification is the travel choice, the features are the corresponding individual characteristics of passengers. This binary classification problem is estimated using the random decision forests at three walking durations of 5, 8, and 13 minutes. The result shows that trip purpose plays the most important role in deciding to walk to rail transits. The other features of peak hour, age, occupation also show significance in affecting the willingness of walking to rail transits. This result can be applied to estimate the willingness of walking to rail transit at any given walking duration. This willingness is an important reflection of potential passenger around stations, which can be also used for estimating the catchment area of transit stations.}
+
+% Keywords
+\keyword{walking duration; rail transit station; catchment area; individual characteristics;}
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences:
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data:
+%\dataset{DOI number or link to the deposited data set in cases where the data set is published or set to be published separately. If the data set is submitted and will be published as a supplement to this paper in the journal Data, this field will be filled by the editors of the journal. In this case, please make sure to submit the data set as a supplement when entering your manuscript into our manuscript editorial system.}
+
+%\datasetlicense{license under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%\setcounter{secnumdepth}{4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Only for the journal Gels: Please place the Experimental Section after the Conclusions
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+At present, the 800m (half-mile) walking distance has been widely accepted as a principal reference of the catchment area for the planning of Transit-Oriented Development (TOD) \cite{kuby2004factors,gutierrez2011transit,cardozo2012application,zhao2013influences}. Planners and researchers also use rail transit catchment areas to make prediction of ridership. In practice, this 800m walking distance is loosely obtained from the sampling survey by asking how far people are willing to walk to rail transit stations, and the same reasoning has been used to justify other rail transit catchment areas and even in different cities and countries with various walking distance preferences. As to passengers, the acceptable walking distance/duration should not be only associated with the features of the built environment such as the scale of stations and the functions of the buildings around stations, but also the features of passengers' individual characteristics, such as occupations and trip purposes.
+
+%
+Rail transit provides a cheaper and environment-friendly way of transportation to passengers. Like any other service and commodities, it needs to face the market and should be transacted at the cost acceptable to consumers. Accordingly, the distribution of transaction cost can reflect the consumption-ability of consumers in the market. Obviously, it is important for rail transit operators to know how much the cost that consumers are willing to pay, based on which thereby making rail transit more attractive. But a little different from general service and commodities, for passengers, the cost refers to the convenience rather than the fare, because the cheap enough fare is already not the important element for passengers to decide whether using rail transit while the walking duration to stations become the important determinant.
+
+%
+As to the case of rail transit, before a potential passenger makes the decision of walking to a station, the expected walking duration, which is the "price" for this potential passenger, is just the reflection of the distance between departures and stations; while if this expected walking duration can be accepted by this potential passenger, this trip will happen and be surveyed. Based on the analogy given before, it's easy to think of that people with different individual characteristics generally should have different willingness towards walking duration to stations \cite{frank1994impacts}, and the surveyed walking durations can be viewed as the transaction price which have been accepted by passengers. It follows that the willingness of using rail transit will increase if the expected walking duration is less than that of acceptable range, otherwise, the willingness will decrease \cite{waterson2003simulating}. Reflected in the survey data, the number of records with shorter walking duration will be more than that with longer walking duration. 
+
+%
+As interpreted above, although the walking duration is just the reflection of distance between departures and stations, it should have relevance with individual characteristics \cite{besser2005walking,daniels2013explaining,guerra2012half,larsen2010beyond,yang2012walking,krygsman2004multimodal}. With the aim of explain walking duration to transit stations, this study uses Fukuoka of Japan as the study case to investigate walking durations to transit stations with respect to different individual characteristics. The dataset includes passengers' individual characteristics and trip chain information, for example gender, age, occupation, departures, destinations and travel time. The content is organized as follow: section two proposes the specific research questions based on the reviews of previous research, and proposes some basic assumptions for this study; section three presents the description and disposal of data; section four interprets the process of converting the research problem and the model construction; section five is the estimation results; section six discusses the results and draws conclusions. 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Literature Review}
+%
+This section reviews the literature on the issue of walking duration/distance to rail transit stations, some problems still not well addressed are summarized. The review is arranged into two parts, they are, the understanding and disposal of walking duration/distance, and the effect of influencing factors.
+
+%
+\subsection{Walking duration/distance}
+%
+For the walking duration/distance, which is the research object in this study, there is always a difficult point in obtaining the accuracy walking duration/distance by questionnaire because of the discrepancy between perceived values and objective values. Also, the observed walking duration/distance is not the reflection of how long people are willing to spend on walking to rail transit stations, but only the walking duration/distance between departures and stations. For this problem, some studies chose a different perspective trying to explain the walking duration/distance by introducing a threshold of walking duration \cite{besser2005walking,mccormack2008objective}. They examined the differences in the features of explanatory variables in terms of the specific threshold of walking duration. Indeed, investigating the prevalence of walking duration at specific threshold can decrease the discrepancy between observation and reality in some extent, but this disposal also brought some new problems in, for example, it may lead to a great loss of information in the raw data, moreover deciding the threshold of walking duration/distance is also difficult. Another point for this issue is whether to choose walking distance or walking duration as the threshold. To date, there are a lot of studies working on the relationship between walking distance and passengers' individual characteristics, some of them argued that an individual has a limited amount of time spending on traveling during a day, people tend to accept further walking distance as the speed of travel increases \cite{marchetti1994anthropological,larsen2010beyond}. With this reasoning it is easy to think of that passengers with the same individual characteristics may have the similar willingness of walking duration, but they generally have different willingness of walking distance due to different travel speed. 
+
+%
+\subsection{Individual factors influencing walking duration}
+%
+Among the influencing factors for walking durations, passengers' individual characteristics are generally thought to be the key that can affect walking distance \cite{besser2005walking,weinstein2008far,krygsman2004multimodal,yang2012walking,daniels2013explaining,guerra2012half}, whereas, there are few studies having clearly verified the relationship between individual characteristics and walking distance/duration, even there is a study suggesting the walking distance should not be viewed as a function of socio-demographic characteristics \cite{krygsman2004multimodal}. Several studies have confirmed the role of travel purposes in determining walking distance, the commute trip showed particularity from the other purposes, people with the purpose of commute tend to walk a longer distance to rail transit stations \cite{larsen2010beyond}. However, the definite relationship between trip purposes and walking distance is still unclear. The situation is the same with other categories of factors, such as the factors of transportation environment, land use, and willingness of passengers \cite{guerra2012half,krygsman2004multimodal,weinstein2008far}. The only thing that has been confirmed to date is that the walking distance/duration can be influenced by some specific kinds of factors, such as socio-demographic characteristics, trip purposes, and built-environment, but the problem is how and to what degree the walking distance/duration can be influenced.
+
+%
+\subsection{Summary and basic assumptions}
+%
+It may be because of the problems in the disposal of walking distance/duration or the selection of influencing factors, most of the existing studies did not find the significant relevance between the walking distance/duration and the influencing factors. The studies working on the qualitative description for the distribution of walking distance accounted for the majority although some of the existing studies attempted regression model on this issue, the expected results were not obtained. To avoid the problems mentioned in the review, this study uses the thresholds of walking duration as the research object; for any given threshold of walking duration, the respondent who gives the answer longer than the given threshold can be viewed as this respondent can accept this threshold of walking duration; thus the surveyed walking duration can be converted into the reflection of passengers' willingness for using rail transit. For the analytical method, since various types of regression model has been verified unsuitable for this issue, instead of finding the linear relevance between dependent and independent variables, this study introduces the approach of machine learning into this issue, and try to explain the relevance between walking durations and individual characteristics from the view of probability.
+
+%
+Based on the statements outlined above, several assumptions is necessary for this study.
+\begin{itemize}
+	\item $A1$: The distribution of departures and destinations of people with different individual characteristics in Fukuoka, Japan, is random in space. 
+	
+	\item $A2$: The maximum acceptable walking duration of people with same individual characteristics should subject to the normal distribution. 
+	
+	\item $A3$: The respondents are viewed as they can accept the walking duration that they answered.
+\end{itemize}
+
+%
+Based on H1 and H2, when examining the threshold of walking duration $t$, set the proportion of $k$ group in the whole surveyed sample as $r_k$, the proportion of people whose walking durations are under the given threshold of $t$ is marked as $r_{k}^{<t}$, the proportion of people whose walking durations are over the given threshold of $t$ minutes is marked as $r_{k}^{>t}$. If individual characteristics have no significant correlation with maximum acceptable walking durations, there should be no significant differences among $r_k$, $r_{k}^{<t}$, and $r_{k}^{>t}$; otherwise, the three proportion should show significant differences, and the differences will show regularities at different threshold $t$.
+
+%
+Based on H3, if someone gives the answer $t$ minutes, it means this respondent can accept the walking duration of $t$ minutes and any walking duration that less than $t$ minutes. Indeed, this respondent perhaps can accept the walking duration over he answered, but this study just concern about if he can accept the given threshold of the walking duration other than how long he can accept.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data}
+%
+\subsection{Study case}
+The study case of Fukuoka is the sixth largest city in Japan which has the population of more than 1.5 million. The dataset is the Northern Kyushu Area Person Trip, which is conducted about every 12 years. The latest available data is from the 4th survey surveyed by the year of 2005, and the 5th survey is already in preparation from September 2017. Figure \ref{fig:StationDistribution} shows the research area and the distribution of rail transit stations. By the year of 2005 (the 4th Northern Kyushu Area Person Trip Survey was conducted), there are more than 70 stations located within the city area of Fukuoka, of which the number of JR Kyushu station is 27, Fukuoka Subway station is 35, and West Japan Railway station is 16. Now some new rail transit lines and stations are still under planning and construction. According to the “Survey on the current state of public transportation” published by the Ministry of Land, Infrastructure, Transport and Tourism of Japan, the rail transit system in Fukuoka carries a daily average of more than 0.4 million passengers by 2015, accounting for more than 20\% in total motorized travel. Although the rail transit system of Fukuoka is still not a large-scale one at now, it has been playing a crucial role in people's daily travel.
+
+%
+\begin{figure}[h]
+	\caption{Distribution of Transit Stations}
+	\label{fig:StationDistribution}
+	\centering
+	\fbox{\includegraphics[width=0.75\linewidth]{StationDistribution}}
+\end{figure}
+
+%
+\subsection{Data description}
+%
+The main purpose of person trip survey is to know the travel trends, thus making a better living environment and providing support for traffic planning. The original data covered the range of all the main cities in Northern Kyushu Area, which has more than 483,000 records of trip chaining behavior. The available data in this study mainly includes trip chaining behavior and socio-demographic characteristics, as shown in the table \ref{table:AvailableData}.
+
+%
+\begin{table}[h]
+	\centering
+	\caption{Available Data Contents}
+	\label{table:AvailableData}
+	\begin{tabular}{cc}
+		\toprule
+		Category & Feature\\
+		\midrule
+		Trip chaining behavior & Departure location \\
+		& Departure time \\
+		& Destination location \\
+		& Arrival time \\
+		& Transport modes \\
+		& Time spent for each mode \\
+		& Location of bus stop or rail transit station \\
+		\midrule
+		Socio-demographic attributes & Age \\
+		& Sex \\
+		& Occupation \\
+		& Trip purpose \\
+		& Vehicle/License holding \\
+		& Address \\
+		\bottomrule
+	\end{tabular}
+	\normalsize
+\end{table}
+
+%
+To analyze the walking duration between departures and rail transit stations in Fukuoka, the first step is to extract the valid records of rail transit trip within the city area of Fukuoka from over 480,000 records in the dataset. The procedure of extracting the valid data is divided into 3 steps. Firstly, extracting all the person trip data that surveyed within the city area of Fukuoka; secondly, selecting the trip chaining behavior which contains the rail transit mode; thirdly, filtering the invalid data that with null value or abnormal value. The procedure of data cleaning is shown in figure \ref{fig:DataCleaning}, at last the valid dataset is reduced to a size of 4254 trips.
+
+%
+\begin{figure}[h]
+	\caption{Process of Data Cleaning}
+	\label{fig:DataCleaning}
+	\centering
+	\fbox{\includegraphics[width=0.75\linewidth]{DataCleaning}}
+\end{figure}
+
+%
+Figure \ref{fig:AgeDistribution} shows the age distribution for walking trips to rail transit stations based on the finally valid dataset. The passengers aged from 25 to 55 account for the majority of the whole passengers, while schoolchildren aged under 15 rarely take rail transit. The distribution graph does not show significant peak values at any specific age group. Figure \ref{fig:DurationDistribution} shows the distribution of real walking durations to stations, it has a mean value of 8.32, and the standard deviation is 2. Notably, there are several peak values at the time of 5 multiples. It is speculated that the peak values may be caused by deviation occurred in the investigation. Since people's feeling about the specific time or number is inaccurate, they are inclined to reply a loose answer when they are asked some questions about the details of walking duration. This inclination will count some of the real walking duration that is near to 5 multiples as the 5 multiples and finally expressed in the result of investigation. Despite the bias between survey and reality, as the second assumption proposed before, passengers are viewed that they can accept the walking duration what they answered, therefore, the peak values are thought available in this study.
+
+%
+\begin{figure}[h]
+	\caption{The Age Distribution of Passengers}
+	\label{fig:AgeDistribution}
+	\centering
+	\fbox{\includegraphics[width=0.75\linewidth]{AgeDistribution}}
+\end{figure}
+
+%
+\begin{figure}[h]
+	\caption{Distribution of Walking Duration}
+	\label{fig:DurationDistribution}
+	\centering
+	\fbox{\includegraphics[width=0.75\linewidth]{DurationDistribution}}
+\end{figure}
+
+\subsection{Data preprocessing}
+The procedure of feature selection includes two parts, the first is the disposal of features with low variance, and the second is the univariate feature selection. The first one is used for filtering the features accounting for very little in the total samples, because a too small quantity in the sample cannot present significant influence on the result. In this study, the multi-categorical features in the original dataset are reclassified into larger groups, thus dealing with the features with low variance. The second step is to select the valid features that indeed have relevance with the independent variable, this step is based on statistical tests. In this study, the Analysis of Variance (ANOVA) is used for estimating the importance of each feature.
+
+The feature of trip purpose has 15 subcategories in the original dataset, this study reclassifies them into 5 categories including commuting to work, commuting to school, official business, private purpose (such as shopping, entertainment), and going home. The feature of occupation is reclassified from 14 subcategories into 5 categories as well, they are service, technology, administration, student, and the other. Table \ref{table:StatisticalDescription} reports some of the statistical description for each feature. Overall, the average walking duration to rail transit stations is 8.32 minutes; more than 75\% of the passengers walk less than 10 minutes; most passengers walk to stations costing 5-10 minutes. In detail, there are some significant differences in the statistical description for each feature, the differences are summarized as follows.
+%
+\begin{enumerate}
+	\item The walking duration in peak hour is longer than off-peak hour.
+	\item Young and old people are inclined to spend less time on walking to rail transit stations.
+	\item Passengers with the trip purposes of official business and going home tend to take shorter time in walking to rail transit stations.
+	\item Passengers with the trip purpose of commuting to work are willing to accept a longer walking duration than that with other purposes significantly.
+\end{enumerate}
+
+\begin{table}[h]
+	\caption{Statistical Description of Walking Duration for Each Feature}
+	\label{table:StatisticalDescription}
+	\centering
+	\small
+	\renewcommand{\arraystretch}{1.25}
+	\begin{tabular}{ccrrccccccc}
+		\toprule
+		Features & Categories & Count & Proportion & Mean & Std & 10th & 25th & 50th & 75th & 90th\\
+		\midrule
+		& Total    & 4254  & - & 8.32  & 4.63  & 3     & 5     & 8     & 10    & 15 \\
+		\midrule
+		%
+		\multicolumn{1}{c}{Sex}
+		& male     & 2257  & 53.1\%    & 8.41  & 4.63  & 3     & 5     & 8     & 10    & 15 \\
+		& female   & 1996  & 46.90\%   & 8.22  & 4.63  & 3     & 5     & 7     & 10    & 15 \\
+		\midrule
+		%
+		\multicolumn{1}{c}{Peak hour}
+		& peak     & 2976  & 70.00\%   & 8.51  & 4.66  & 3     & 5     & 8     & 10    & 15 \\
+		& Off peak & 1277  & 30.00\%   & 7.88  & 4.52  & 3     & 5     & 7     & 10    & 15 \\
+		\midrule
+		%
+		\multicolumn{1}{c}{Age}
+		& 5-24     & 543   & 12.80\%   & 8.18  & 4.7   & 3     & 5     & 7     & 10    & 15 \\
+		& 25-44    & 1992  & 46.80\%   & 8.36  & 4.42  & 3     & 5     & 8     & 10    & 15 \\
+		& 45-64    & 1407  & 33.10\%   & 8.43  & 4.83  & 3     & 5     & 8     & 10    & 15 \\
+		& 65-      & 311   &  7.30\%   & 7.78  & 4.81  & 3     & 5     & 7     & 10    & 15 \\
+		\midrule
+		%
+		\multicolumn{1}{c}{Occupation}
+		& service  & 1256  & 29.50\%   & 8.32  & 4.57  & 3     & 5     & 8     & 10    & 15 \\
+		& tech     & 721   & 17.00\%   & 8.58  & 4.89  & 3     & 5     & 8     & 10    & 15 \\
+		& office   & 1076  & 25.30\%   & 8.44  & 4.48  & 4     & 5     & 8     & 10    & 15 \\
+		& student  & 325   &  7.60\%   & 8.12  & 4.73  & 3     & 5     & 7     & 10    & 15 \\
+		& null     & 875   & 20.60\%   & 8.03  & 4.62  & 3     & 5     & 7     & 10    & 15 \\
+		\midrule
+		%
+		\multicolumn{1}{c}{Purpose}
+		& going to work   & 2697  & 63.40\% & 8.69  & 4.51  & 4     & 5     & 9     & 10    & 15 \\
+		& going to school & 287   &  6.70\% & 8.19  & 4.6   & 3     & 5     & 8     & 10    & 15 \\
+		& business   & 153   &  3.60\% & 7.1   & 5.05  & 2     & 3     & 5     & 10    & 15 \\
+		& private purpose     & 789   & 18.60\% & 7.82  & 4.78  & 3     & 5     & 7     & 10    & 15 \\
+		& going home          & 327   &  7.70\% & 7.17  & 4.67  & 2     & 5     & 5     & 10    & 15 \\
+		%
+		\bottomrule
+	\end{tabular}
+	\normalsize
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Methods}
+%
+In this study, the variable of walking duration to the rail transit station is a continuous one, while the variables of individual characteristics are multi-categorical, for which the multiple linear regression is considered not applicable. Although there were some studies using the multiple linear regression to estimate the walking duration, the result showed no clear relationship \cite{krygsman2004multimodal}. Based on the assumptions proposed before, when giving a specific threshold of walking duration, passengers who walk longer or less than this given threshold should have different features in individual characteristics. The question can be converted into a binary classification problem that people who walked longer than the given duration is labeled as "actually accepted this given value", while people who walked less than the given value is labeled as "unknown". Passengers are thought to have a higher probability of choosing rail transit when given a threshold less than that they have been accepted. The abstract model describing this relevance is expressed as follow, of which Equation \ref{eq:threshold} defines the choice result $Y^T_i$, and Equation \ref{eq:probability} gives the probability of $Y^T_i=1$ at given vector of $X_i$.
+
+% & 符号为对齐符号，用于 table 或 matrix
+\begin{equation}
+\left\{\begin{matrix}
+Y^T_i=1,&(t_i>T) \\
+Y^T_i=0,&(t_i<T)
+\end{matrix}\right.
+\label{eq:threshold}
+\end{equation}
+
+\begin{equation}
+P(Y^T_i=1 \mid X_i)=F(X_i)
+\label{eq:probability}
+\end{equation}
+
+%
+\begin{enumerate}
+	\item[$t_i$] is the walking duration answered by passenger $i$ (in minutes).
+	\item[$T$] is the threshold of walking duration that to be examined (in minutes).
+	\item[$Y^T_i$] is a binary variable. According to assumption 3, $Y^T_i=1$ means passenger $i$ can accept the threshold of $T$; while $Y^T_i=0$ indicates that it is uncertain whether passenger $i$ can accept this threshold.
+	\item[$X_i$] is the vector whose component is the individual characteristics of passengers.
+\end{enumerate}
+
+%
+Since the question has been converted into a binary classification problem, for which the models of decision tree, Bayesian, support vector machine (SVM), logistic regression, and neural network are widely adopted. In this study, limited by the volume of sample, also the unknown internal relationship among features, the decision tree model should be a good choice because of the good generalization for different forms of data. Furthermore, to avoid the structure of tree from being too complicated, and to improve the robustness of model, this study will use an improved model of decision tree, the random forest model, to train and test the sample. Random forests model is an extension and improvement for the decision tree model, it is operated by constructing a multitude of decision trees and randomly selecting the features at training time \cite{ho1995random,ho1998random}. The structure is presented in Figure \ref{fig:RandomForests}. For the random forest model, the prediction is not obtained from the only one decision tree but the multitude of decision trees constructed by random selection of features and samples. In addition, to improve the efficiency and accuracy of the model, and reduce the number of invalid branches in the model, it is also necessary to filter the invalid features before estimating the model.
+
+%
+\begin{figure}[h]
+	\caption{Prediction Process in Random Forests Model}
+	\label{fig:RandomForests}
+	\centering
+	\fbox{\includegraphics[width=0.75\linewidth]{RandomForests}}
+\end{figure}
+
+%
+Briefly, the general process of this study can be summarized as follows. Firstly, data is extracted on the Fukuoka city-wide, including 4254 samples, and 6 main categories of features. Secondly, the features with importance in explaining the willingness of walking duration are selected by using analysis of variance (ANOVA). Thirdly, random forest model for each threshold of walking duration is estimated, the result obtained from the random forest model is the probability of walking longer than the given threshold of walking duration for each passenger in terms of individual characteristics. Finally, the accuracy of this result is evaluated using the method of simple moving average by descending order of the predicted probabilities.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+%
+\subsection{Valid features}
+%
+According to the achievements from previous studies, the walking distance to rail transit stations ranged generally from 400 meters to 1000 meters in terms of different city types, travel preference, also the needs of research purpose \cite{guerra2012half,murray1998public,o1996walking,keijer2000people,zhao2003forecasting,alshalalfah2007case}. If converting this walking distance into walking duration by using the walking speed of 4.8 km/h, the walking duration would range from 5 minutes to 13 minutes \cite{bohannon1997comfortable}. In this study, more than 40\% of the samples walk less than 5 minutes, and the walking duration within 13 minutes covers about 85\% of the total. It means that the 5 minutes walking duration can be accepted by most passengers, while a walking duration longer than 13 minutes is not a general acceptable one. In addition, as the average walking duration in this study is 8.32 minutes, the three representative thresholds of 5, 8, 13 minutes are picked as the typical threshold for estimating the relationship between individual characteristics and walking durations. The features with the p-value in ANOVA less than 0.05, which means this feature relevant with the dependent variable at the confidence level of 95\%, are picked out and listed in Table \ref{table:ValidFeatures}.
+
+%
+\begin{table}[h]
+	\caption{Valid Features and the Effect at Each Threshold}
+	\label{table:ValidFeatures}
+	\centering
+	\begin{tabular}{llllll}
+		\toprule
+		\multicolumn{2}{c}{5 min threshold} & \multicolumn{2}{c}{8 min threshold} & \multicolumn{2}{c}{13 min threshold} \\
+		\midrule
+		Features & Effect* & Features & Effect* & Features & Effect* \\
+		Age over 65 & L	& Female & M & Age 45-64 & M \\
+		Peak hour & M & Age 25-44 & M & Peak hour & M \\
+		O\_Null	& L	& Peak hour	& M	& P\_commuting to work & M \\
+		P\_commuting to work & M	& P\_commuting to work  & M	& P\_ private purpose & L \\
+		P\_official business & L & P\_official business	& L	& & \\
+		P\_private purpose & L & P\_ private purpose	& L & & \\
+		P\_going home & L & P\_ going home & L & &   \\
+		\bottomrule
+	\end{tabular}
+	\normalsize
+	%
+	\begin{description}
+		\item[*Note:] L means the individual with this feature tend to walk longer than the given threshold of walking duration, while M is the opposite meaning.
+	\end{description}
+\end{table}
+
+%
+From the result in Table \ref{table:ValidFeatures}, travel purpose is the most important factor in determining the walking durations at all the 3 thresholds. The feature of peak hour is also significant in explaining the walking duration. People tend to walk a longer time to stations at peak hours, while people with private purpose or on the way going home are not willing to choose a stations far away. For the details of each threshold, at the threshold of 5 minutes, the features of trip purposes and peak hour play the most important role in determining the willingness of walking duration, where the unemployed people and the elderly people tend to walk less than 5 minutes to stations. As to the threshold of 8 minutes, the importance of age and gender raised in some extent, where people whose age is between 25 and 44 are unwilling to walk more than 8 minutes. Moreover, the middle-aged people tend to walk longer than other groups, where people aged from 45 to 64 can accept walking more than 13 minutes to stations more easily. 
+
+% 
+This result of feature selection is also consistent with common sense and partly confirmed by the previous research. Most of the surveyed walking durations distribute around the average walking duration of 8 minutes, it can be considered that walking duration between 5 and 13 minutes is sensitive to individual characteristics. The walking duration more than 13 minutes is not accepted by most people even if they have different individual characteristics, and the threshold less than 5 minutes is also not sensitive to individual characteristics since the 5 minutes threshold is generally accepted by most passengers.
+
+%
+\subsection{Model estimation}
+The valid features (Table \ref{table:ValidFeatures}) are used in the random forest model to estimate the probability that walking longer than the given threshold of walking duration. For estimating the model, the dataset is divided into two parts, 50\% of the sample are used for fitting the model thus obtaining the coefficients, the rest 50\% are used for testing the ability of prediction. The dependent variable at the given threshold of walking duration to rail transit stations is calculated by Equation \ref{eq:threshold} based on the mean prediction.
+
+%
+The accuracy of results are evaluated by using the method of simple moving average. Figure \ref{fig:PredictionTrendLine} is the trend line of probabilities that walking less than the given threshold. The trend line of the surveyed values based on the test set is calculated by the mean probability of a group people who have close predicted values. The trend line is drawn by a descending order of predicted values. From the comparison of predicted values and surveyed values, it can be known that the prediction at the threshold of 5 minutes has the best fitness, and the prediction for the threshold of 13 minutes is also slightly good, while it is not so good in the case of 8 minutes. In fact, if checking the prediction for individuals, the accuracy of this model is still not enough to explain the individual behavior. But the trend line in Figure \ref{fig:PredictionTrendLine} infers that this result can reflect the behavior of people with specific individual characteristics at a given threshold of walking duration. 
+
+\begin{figure}[h]
+	\caption{Trend Line of Prediction and Test Set}
+	\label{fig:PredictionTrendLine}
+	\centering
+	\includegraphics[width=0.6\linewidth]{Prediction5Min}\\
+	\includegraphics[width=0.6\linewidth]{Prediction8Min}\\
+	\includegraphics[width=0.6\linewidth]{Prediction13Min}\\
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 待修改
+\section{Discussion and Conclusion}
+% Overall significance
+This study regarded surveyed walking duration as the reflection of willingness on walking duration rather than the distance between departures and transit stations. From this perspective the present study investigated the prevalence of walking duration with respect to the individual characteristics. This study established the quantitative correlation between walking duration and individual characteristics, also provided a general perspective for estimating the factor influencing walking duration. The approach and results are expected can be used in estimating or planning the catchment area of public rail transit, which is also considered as the foundation for predicting transit ridership \cite{guerra2013half}.
+
+% 
+Viewing from the process of problem conversion, the data in this study is obtained from a factual investigation but not a willingness survey, which means that once people have made a decision of walking to rail transit stations, the walking duration is just representation of the location of departures and the walking speed. It is hard to say whether the individual characteristics affected the walking durations, maybe due to this reason few existing studies can explain the relevance between walking duration and individual characteristics quantitatively correctly \cite{krygsman2004multimodal,levtnson1997density,daniels2013explaining}. In this study, the surveyed walking duration is regarded as reflection of the willingness on walking duration, thus it should relate to people's individual characteristics. On the base of assumption $A3$, the behavior that a passenger chose to walk to a station means this passenger can accept the walking duration from the departure to that station. From assumption $A1$ and $A2$, if the passenger who accepted the given threshold of walking duration shows significant differences in individual characteristics, it means they have a different acceptability of walking duration with the others.
+
+%
+As explained above, this study examined the differences in individual characteristics of which people who accepted the given thresholds of walking duration. As the results, people with different individual characteristics shows different acceptability at each threshold of walking duration. According to the evaluation from the method of simple moving average, the model of 5 minutes’ threshold has a better explanatory ability, the model of 13 minutes' threshold is a little weaker, and the model of 8 minutes' threshold is not good. Possible expectations for these results are as follows. The selected thresholds of walking duration 5, 8, 13 minutes represent the lower boundary, mean value, and upper boundary of the main distribution of walking durations respectively. The commonly acceptable walking durations range from 5 to 13 minutes, therefore, it can be inferred that people who prefer walking less than 5 minutes and who can accept walking longer than 13 minutes may have significant features. However, since the mean value of walking duration is about 8 minutes, which means that most of the walking durations distributes around 8 minutes, for passengers there may be some randomness in making the decision of whether walking to rail transit stations. For the other threshold values near the mean value of 8 minutes, it also can be inferred that people may have some ambiguity in choosing whether to walk to stations or not. This explanation can also be confirmed by the result of valid features selection. There are 5 identical features in both thresholds of 5 and 8 minutes, which means people with those features are not sensitive to the threshold from 5 to 8 minutes.
+
+%
+Although the clear relationship between walking duration/distance and explanatory variables is rarely confirmed in the previous research, travel purpose was assumed to be one of the most important factors influencing walking duration \cite{krygsman2004multimodal,yang2012walking}. Significance discrepancy with respect to travel purpose is also confirmed in some descriptive analysis \cite{burke2007distances,hoback2008true}. According to the findings in this study, walking for private purpose, such as reaction and shopping, tends to be longer than that for work purpose, this finding is also supported by other research \cite{yang2012walking}. The dummy variable of peak hour is also assumed to be one of the important factor influencing walking duration to transit stations, however, significant effect was not confirmed in previous research \cite{daniels2013explaining,krygsman2004multimodal}. This study found that passengers have an inclination of taking a shorter time to walk to stations during peak hours. A possible explanation for this result may be the tension in time, for which even if the acceptable walking duration has not changed for a passenger, the acceptable walking duration is supposed to become shorter. This explanation also can be mutually verified by the effect of travel purpose obtained in this study. Since peak hour commonly covers the trip with the purpose of work, passengers with the travel purpose of work are willing to get to stations faster as well. Moreover, this study also indicates that different age groups have different willingness on walking duration to transit stations, passengers aged from 25 to 44, which is in the range of productive age, tend to walk a shorter time to stations. This finding also can be supported by the effect of travel purpose and peak hour obtained in this study.
+
+
+% 展望
+This study is the first step to explore the relationship between walking duration and individual characteristics, the findings in this study require further examination in terms of generality, and the way of applying the achievement need to be further discussed. The results of the random forest model perform not well on individual predictions. But for a group of people, it shows a good predictive ability, especially at the threshold of 5 minutes. In the next stage of this research, we plan to apply the results on predicting the willingness at a specific threshold of walking duration for a group of people. By using this prediction, for example, if knowing the individual characteristics of residents in a particular area locating from the rail transit station $T$ minutes, the general acceptability of walking to the station for the residents in this area should be predictive. Therefore, this prediction of willingness is expected to be used in planning the catchment area of rail transit stations or estimating the catchment area of existing stations.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+%\supplementary{The following are available online at \linksupplementary{s1}, Figure S1: title, Table S1: title, Video S1: title.}
+
+% Only for the journal Methods and Protocols:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following are available at \linksupplementary, Figure S1: title, Table S1: title, Video S1: title. A supporting video article is available at doi: link.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. The following statements should be used ``Conceptualization, X.X. and Y.Y.; Methodology, X.X.; Software, X.X.; Validation, X.X., Y.Y. and Z.Z.; Formal Analysis, X.X.; Investigation, X.X.; Resources, X.X.; Data Curation, X.X.; Writing—Original Draft Preparation, X.X.; Writing—Review \& Editing, X.X.; Visualization, X.X.; Supervision, X.X.; Project Administration, X.X.; Funding Acquisition, Y.Y.'', please turn to the \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work reported. }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\funding{Please add: ``This research received no external funding'' or ``This research was funded by [name of funder] grant number [xxx].'' Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g. materials used for experiments).}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\conflictsofinterest{Declare conflicts of interest or state ``The authors declare no conflict of interest.'' Authors must identify and declare any personal circumstances or interest that may be perceived as inappropriately influencing the representation or interpretation of reported research results. Any role of the funding sponsors in the design of the study; in the collection, analyses or interpretation of data; in the writing of the manuscript, or in the decision to publish the results must be declared in this section. If there is no role, please state ``The founding sponsors had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript, and in the decision to publish the results''.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: internal bibliography
+%=====================================
+\reftitle{References}
+
+\begin{thebibliography}{999}
+	
+	\bibitem[\protect\citeauthoryear{}{Alshalalfah and
+		Shalaby}{2007}]{alshalalfah2007case}
+	Alshalalfah, B. and Shalaby, A.~S. (2007).
+	\newblock ``Case study: Relationship of walk access distance to transit with
+	service, travel, and personal characteristics.''\ {\em Journal of urban
+		planning and development}, 133(2), 114--118.
+	
+	\bibitem[\protect\citeauthoryear{}{Besser and
+		Dannenberg}{2005}]{besser2005walking}
+	Besser, L.~M. and Dannenberg, A.~L. (2005).
+	\newblock ``Walking to public transit: steps to help meet physical activity
+	recommendations.''\ {\em American journal of preventive medicine}, 29(4),
+	273--280.
+	
+	\bibitem[\protect\citeauthoryear{}{Bohannon}{1997}]{bohannon1997comfortable}
+	Bohannon, R.~W. (1997).
+	\newblock ``Comfortable and maximum walking speed of adults aged 20—79 years:
+	reference values and determinants.''\ {\em Age and ageing}, 26(1), 15--19.
+	
+	\bibitem[\protect\citeauthoryear{}{Burke et~al.\@}{2007}]{burke2007distances}
+	Burke, M., Brown, A., et~al.\@ (2007).
+	\newblock ``Distances people walk for transport.''\ {\em Road \& Transport
+		Research: A Journal of Australian and New Zealand Research and Practice},
+	16(3), 16.
+	
+	\bibitem[\protect\citeauthoryear{}{Cardozo
+		et~al.\@}{2012}]{cardozo2012application}
+	Cardozo, O.~D., Garc{\'\i}a-Palomares, J.~C., and Guti{\'e}rrez, J. (2012).
+	\newblock ``Application of geographically weighted regression to the direct
+	forecasting of transit ridership at station-level.''\ {\em Applied
+		Geography}, 34, 548--558.
+	
+	\bibitem[\protect\citeauthoryear{}{Daniels and
+		Mulley}{2013}]{daniels2013explaining}
+	Daniels, R. and Mulley, C. (2013).
+	\newblock ``Explaining walking distance to public transport: The dominance of
+	public transport supply.''\ {\em Journal of Transport and Land Use}, 6(2),
+	5--20.
+	
+	\bibitem[\protect\citeauthoryear{}{Frank and Pivo}{1994}]{frank1994impacts}
+	Frank, L.~D. and Pivo, G. (1994).
+	\newblock ``Impacts of mixed use and density on utilization of three modes of
+	travel: single-occupant vehicle, transit, and walking.''\ {\em Transportation
+		research record}, 1466, 44--52.
+	
+	\bibitem[\protect\citeauthoryear{}{Guerra and Cervero}{2013}]{guerra2013half}
+	Guerra, E. and Cervero, R. (2013).
+	\newblock ``Is a half-mile circle the right standard for tods?
+	
+	\bibitem[\protect\citeauthoryear{}{Guerra et~al.\@}{2012}]{guerra2012half}
+	Guerra, E., Cervero, R., and Tischler, D. (2012).
+	\newblock ``Half-mile circle: Does it best represent transit station
+	catchments?.''\ {\em Transportation Research Record: Journal of the
+		Transportation Research Board}, (2276), 101--109.
+	
+	\bibitem[\protect\citeauthoryear{}{Guti{\'e}rrez
+		et~al.\@}{2011}]{gutierrez2011transit}
+	Guti{\'e}rrez, J., Cardozo, O.~D., and Garc{\'\i}a-Palomares, J.~C. (2011).
+	\newblock ``Transit ridership forecasting at station level: an approach based
+	on distance-decay weighted regression.''\ {\em Journal of Transport
+		Geography}, 19(6), 1081--1092.
+	
+	\bibitem[\protect\citeauthoryear{}{Ho}{1995}]{ho1995random}
+	Ho, T.~K. (1995).
+	\newblock ``Random decision forests.''\ {\em Document analysis and recognition,
+		1995., proceedings of the third international conference on}, Vol.~1, IEEE,
+	278--282.
+	
+	\bibitem[\protect\citeauthoryear{}{Ho}{1998}]{ho1998random}
+	Ho, T.~K. (1998).
+	\newblock ``The random subspace method for constructing decision forests.''\
+	{\em IEEE transactions on pattern analysis and machine intelligence}, 20(8),
+	832--844.
+	
+	\bibitem[\protect\citeauthoryear{}{Hoback et~al.\@}{2008}]{hoback2008true}
+	Hoback, A., Anderson, S., and Dutta, U. (2008).
+	\newblock ``True walking distance to transit.''\ {\em Transportation planning
+		and technology}, 31(6), 681--692.
+	
+	\bibitem[\protect\citeauthoryear{}{Keijer and
+		Rietveld}{2000}]{keijer2000people}
+	Keijer, M. and Rietveld, P. (2000).
+	\newblock ``How do people get to the railway station? the dutch experience.''\
+	{\em Transportation Planning and Technology}, 23(3), 215--235.
+	
+	\bibitem[\protect\citeauthoryear{}{Krygsman
+		et~al.\@}{2004}]{krygsman2004multimodal}
+	Krygsman, S., Dijst, M., and Arentze, T. (2004).
+	\newblock ``Multimodal public transport: an analysis of travel time elements
+	and the interconnectivity ratio.''\ {\em Transport Policy}, 11(3), 265--275.
+	
+	\bibitem[\protect\citeauthoryear{}{Kuby et~al.\@}{2004}]{kuby2004factors}
+	Kuby, M., Barranda, A., and Upchurch, C. (2004).
+	\newblock ``Factors influencing light-rail station boardings in the united
+	states.''\ {\em Transportation Research Part A: Policy and Practice}, 38(3),
+	223--247.
+	
+	\bibitem[\protect\citeauthoryear{}{Larsen et~al.\@}{2010}]{larsen2010beyond}
+	Larsen, J., El-Geneidy, A., and Yasmin, F. (2010).
+	\newblock ``Beyond the quarter mile: re-examining travel distances by active
+	transportation.''\ {\em Canadian Journal of Urban Research}, 19(1), 70--88.
+	
+	\bibitem[\protect\citeauthoryear{}{LEVTNSON and
+		Kumar}{1997}]{levtnson1997density}
+	LEVTNSON, D.~M. and Kumar, A. (1997).
+	\newblock ``Density and the journey to work.''\ {\em Growth and change}, 28(2),
+	147--172.
+	
+	\bibitem[\protect\citeauthoryear{}{Marchetti}{1994}]{marchetti1994anthropological}
+	Marchetti, C. (1994).
+	\newblock ``Anthropological invariants in travel behavior.''\ {\em
+		Technological forecasting and social change}, 47(1), 75--88.
+	
+	\bibitem[\protect\citeauthoryear{}{McCormack
+		et~al.\@}{2008}]{mccormack2008objective}
+	McCormack, G.~R., Cerin, E., Leslie, E., Du~Toit, L., and Owen, N. (2008).
+	\newblock ``Objective versus perceived walking distances to destinations:
+	correspondence and predictive validity.''\ {\em Environment and behavior},
+	40(3), 401--425.
+	
+	\bibitem[\protect\citeauthoryear{}{Murray et~al.\@}{1998}]{murray1998public}
+	Murray, A.~T., Davis, R., Stimson, R.~J., and Ferreira, L. (1998).
+	\newblock ``Public transportation access.''\ {\em Transportation Research Part
+		D: Transport and Environment}, 3(5), 319--328.
+	
+	\bibitem[\protect\citeauthoryear{}{O'Sullivan and Morrall}{1996}]{o1996walking}
+	O'Sullivan, S. and Morrall, J. (1996).
+	\newblock ``Walking distances to and from light-rail transit stations.''\ {\em
+		Transportation research record: journal of the transportation research
+		board}, (1538), 19--26.
+	
+	\bibitem[\protect\citeauthoryear{}{Waterson
+		et~al.\@}{2003}]{waterson2003simulating}
+	Waterson, B., Rajbhandari, B., and Hounsell, N. (2003).
+	\newblock ``Simulating the impacts of strong bus priority measures.''\ {\em
+		Journal of Transportation Engineering}, 129(6), 642--647.
+	
+	\bibitem[\protect\citeauthoryear{}{Weinstein~Agrawal
+		et~al.\@}{2008}]{weinstein2008far}
+	Weinstein~Agrawal, A., Schlossberg, M., and Irvin, K. (2008).
+	\newblock ``How far, by which route and why? a spatial analysis of pedestrian
+	preference.''\ {\em Journal of urban design}, 13(1), 81--98.
+	
+	\bibitem[\protect\citeauthoryear{}{Yang and Diez-Roux}{2012}]{yang2012walking}
+	Yang, Y. and Diez-Roux, A.~V. (2012).
+	\newblock ``Walking distance by trip purpose and population subgroups.''\ {\em
+		American journal of preventive medicine}, 43(1), 11--19.
+	
+	\bibitem[\protect\citeauthoryear{}{Zhao et~al.\@}{2003}]{zhao2003forecasting}
+	Zhao, F., Chow, L.-F., Li, M.-T., Ubaka, I., and Gan, A. (2003).
+	\newblock ``Forecasting transit walk accessibility: Regression model
+	alternative to buffer method.''\ {\em Transportation Research Record: Journal
+		of the Transportation Research Board}, (1835), 34--41.
+	
+	\bibitem[\protect\citeauthoryear{}{Zhao et~al.\@}{2013}]{zhao2013influences}
+	Zhao, J., Deng, W., Song, Y., and Zhu, Y. (2013).
+	\newblock ``What influences metro station ridership in china? insights from
+	nanjing.''\ {\em Cities}, 35, 114--124.
+	
+\end{thebibliography}
+
+
+% The following MDPI journals use author-date citation: Arts, Econometrics, Economies, Genealogy, Humanities, IJFS, JRFM, Laws, Religions, Risks, Social Sciences. For those journals, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%=====================================
+% References, variant B: external bibliography
+%=====================================
+%\externalbibliography{yes}
+%\bibliography{your_external_BibTeX_file}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+\sampleavailability{}
+
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
