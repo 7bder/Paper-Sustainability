@@ -70,25 +70,25 @@
 %\newcommand{\orcidauthorB}{0000-0000-000-000X} % Add \orcidB{} behind the author's name
 
 % Authors, for the paper (add full first names)
-\Author{Qi Chen $^{1,\dagger,\ddagger,}$\orcidA{}, Siting Chen $^{2,\dagger,}$, Go Higuchi $^{3,\dagger,}$, and Shichen Zhao $^{4,}$*}
+\Author{Qi Chen $^{1,}$\orcidA{}, Siting Chen $^{2,}$, Go Higuchi $^{3,}$, and Shichen Zhao $^{4,}$*}
 
 % Authors, for metadata in PDF
-\AuthorNames{Firstname Lastname, Firstname Lastname and Firstname Lastname}
+\AuthorNames{Qi Chen, Siting Chen, Go Higuchi and Shichen Zhao}
 
 % Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
 \address{%
-$^{1}$ \quad Doctor Candidate, Graduate School of Human-Environment Studies, Kyushu University, Japan; chenqi.clever@gmail.com\\
-$^{2}$ \quad Graduate Student, Graduate School of Human-Environment Studies, Kyushu University, Japan; miche\_chen@yahoo.com\\
-$^{3}$ \quad Graduate Student, Graduate School of Human-Environment Studies, Kyushu University, Japan; goooooooooo217@gmail.com\\
-$^{4}$ \quad Professor, Dr. Eng. Faculty of Human-Environment Studies, Kyushu University, Japan; zhao@arch.kyushu-u.ac.jp
+	$^{1}$ \quad Graduate School of Human-Environment Studies, Kyushu University, Japan; chenqi.clever@gmail.com\\
+	$^{2}$ \quad Graduate School of Human-Environment Studies, Kyushu University, Japan; miche.siz92@gmail.com\\
+	$^{3}$ \quad Graduate School of Human-Environment Studies, Kyushu University, Japan; goooooooooo217@gmail.com\\
+	$^{4}$ \quad Faculty of Human-Environment Studies, Kyushu University, Japan; zhao@arch.kyushu-u.ac.jp
 }
 
 % Contact information of the corresponding author
-\corres{Correspondence: zhao@arch.kyushu-u.ac.jp; Tel.: +x-xxx-xxx-xxxx}
+\corres{Correspondence: zhao@arch.kyushu-u.ac.jp}
 
 % Current address and/or shared authorship
-\firstnote{Current address: Graduate School of Human-Environment Studies, Kyushu University, Japan} 
-\secondnote{These authors contributed equally to this work.}
+% \firstnote{Current address: Graduate School of Human-Environment Studies, Kyushu University, Japan} 
+% \secondnote{These authors contributed equally to this work.}
 % The commands \thirdnote{} till \eighthnote{} are available for further notes
 
 % Simple summary
@@ -97,7 +97,7 @@ $^{4}$ \quad Professor, Dr. Eng. Faculty of Human-Environment Studies, Kyushu Un
 %\conference{} % An extended version of a conference paper
 
 % Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{Walking duration is one of the determinants in choosing to use rail transit. People with different individual characteristics are supposed to have different willingness on walking duration. This study examines the prevalence of walking durations for different individual characteristics among the residents in Fukuoka of Japan. Walking duration, however, represents the distance between departure and station, it is directly determined by the location of departure but not the individual characteristics. To examine this prevalence, the study treats the behavior that walking to rail transit as a travel choice result. For a given walking duration, people with different individual characteristics are supposed to have different willingness in deciding whether to use rail transit. Based on this supposition, the research question can be converted into a binary classification problem, of which the classification is the travel choice, the features are the corresponding individual characteristics of passengers. This binary classification problem is estimated using the random decision forests at three walking durations of 5, 8, and 13 minutes. The result shows that trip purpose plays the most important role in deciding to walk to rail transits. The other features of peak hour, age, occupation also show significance in affecting the willingness of walking to rail transits. This result can be applied to estimate the willingness of walking to rail transit at any given walking duration. This willingness is an important reflection of potential passenger around stations, which can be also used for estimating the catchment area of transit stations.}
+\abstract{Walking duration is one of the determinants in choosing to use rail transit. This study aims to examine the prevalence of walking durations with respect to different individual characteristics among the residents in Fukuoka of Japan. Walking duration, however, represents the distance between departure and station, it is directly determined by the location of departure but not the individual characteristics. To examine the prevalence of walking duration, this study treats the behavior that walking to rail transit as a travel choice result. For a given walking duration, people with different individual characteristics are supposed to have different willingness in deciding whether to use rail transit. Based on this supposition, the research question can be converted into a binary classification problem, of which the classification is the travel choice, the features are the corresponding individual characteristics of passengers. This binary classification problem is estimated using the random decision forests at three walking durations of 5, 8, and 13 minutes. The result shows that trip purpose plays the most important role in deciding to walk to rail transits. The other features of peak hour, age, occupation also show significance in affecting the willingness of walking to rail transits. This result can be applied to estimate the willingness of walking to rail transit at any given walking duration. This willingness is an important reflection of potential passenger around stations, which can be also used for estimating the catchment area of transit stations.}
 
 % Keywords
 \keyword{walking duration; rail transit station; catchment area; individual characteristics;}
@@ -161,10 +161,10 @@ Among the influencing factors for walking durations, passengers' individual char
 %
 \subsection{Summary and basic assumptions}
 %
-It may be because of the problems in the disposal of walking distance/duration or the selection of influencing factors, most of the existing studies did not find the significant relevance between the walking distance/duration and the influencing factors. The studies working on the qualitative description for the distribution of walking distance accounted for the majority although some of the existing studies attempted regression model on this issue, the expected results were not obtained. To avoid the problems mentioned in the review, this study uses the thresholds of walking duration as the research object; for any given threshold of walking duration, the respondent who gives the answer longer than the given threshold can be viewed as this respondent can accept this threshold of walking duration; thus the surveyed walking duration can be converted into the reflection of passengers' willingness for using rail transit. For the analytical method, since various types of regression model has been verified unsuitable for this issue, instead of finding the linear relevance between dependent and independent variables, this study introduces the approach of machine learning into this issue, and try to explain the relevance between walking durations and individual characteristics from the view of probability.
+It may be because of the problems in the disposal of walking distance/duration or the selection of influencing factors, most of the existing studies did not find the significant relevance between the walking distance/duration and the influencing factors. The studies working on the qualitative description for the distribution of walking distance accounted for the majority although some of the existing studies attempted regression model on this issue, the expected results were not obtained. To avoid the problems mentioned in the review, this study uses the thresholds of walking duration as the research object; for any given threshold of walking duration, the respondent who gives the answer longer than the given threshold can be viewed as this respondent can accept this threshold of walking duration; thus, the surveyed walking duration can be converted into the reflection of passengers' willingness for using rail transit. For the analytical method, since various types of regression model has been verified unsuitable for this issue, instead of finding the linear relevance between dependent and independent variables, this study introduces the approach of machine learning into this issue, and try to explain the relevance between walking durations and individual characteristics from the view of probability.
 
 %
-Based on the statements outlined above, several assumptions is necessary for this study.
+Based on the statements outlined above, several assumptions are necessary for this study.
 \begin{itemize}
 	\item $A1$: The distribution of departures and destinations of people with different individual characteristics in Fukuoka, Japan, is random in space. 
 	
@@ -174,12 +174,14 @@ Based on the statements outlined above, several assumptions is necessary for thi
 \end{itemize}
 
 %
-Based on H1 and H2, when examining the threshold of walking duration $t$, set the proportion of $k$ group in the whole surveyed sample as $r_k$, the proportion of people whose walking durations are under the given threshold of $t$ is marked as $r_{k}^{<t}$, the proportion of people whose walking durations are over the given threshold of $t$ minutes is marked as $r_{k}^{>t}$. If individual characteristics have no significant correlation with maximum acceptable walking durations, there should be no significant differences among $r_k$, $r_{k}^{<t}$, and $r_{k}^{>t}$; otherwise, the three proportion should show significant differences, and the differences will show regularities at different threshold $t$.
+Based on A1 and A2, when examining the threshold of walking duration $t$, set the proportion of $k$ group in the whole surveyed sample as $r_k$, the proportion of people whose walking durations are under the given threshold of $t$ is marked as $r_{k}^{<t}$, the proportion of people whose walking durations are over the given threshold of $t$ minutes is marked as $r_{k}^{>t}$. If individual characteristics have no significant correlation with maximum acceptable walking durations, there should be no significant differences among $r_k$, $r_{k}^{<t}$, and $r_{k}^{>t}$; otherwise, the three proportion should show significant differences, and the differences will show regularities at different threshold $t$.
 
 %
-Based on H3, if someone gives the answer $t$ minutes, it means this respondent can accept the walking duration of $t$ minutes and any walking duration that less than $t$ minutes. Indeed, this respondent perhaps can accept the walking duration over he answered, but this study just concern about if he can accept the given threshold of the walking duration other than how long he can accept.
+Based on A3, if someone gives the answer $t$ minutes, it means this respondent can accept the walking duration of $t$ minutes and any walking duration that less than $t$ minutes. Indeed, this respondent perhaps can accept the walking duration over he answered, but this study just concerns about if he can accept the given threshold of the walking duration other than how long he can accept.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
 \section{Data}
 %
 \subsection{Study case}
@@ -190,11 +192,12 @@ The study case of Fukuoka is the sixth largest city in Japan which has the popul
 	\caption{Distribution of Transit Stations}
 	\label{fig:StationDistribution}
 	\centering
-	\fbox{\includegraphics[width=0.75\linewidth]{StationDistribution}}
+	\fbox{\includegraphics[width=0.6\linewidth]{StationDistribution}}
 \end{figure}
 
 %
 \subsection{Data description}
+
 %
 The main purpose of person trip survey is to know the travel trends, thus making a better living environment and providing support for traffic planning. The original data covered the range of all the main cities in Northern Kyushu Area, which has more than 483,000 records of trip chaining behavior. The available data in this study mainly includes trip chaining behavior and socio-demographic characteristics, as shown in the table \ref{table:AvailableData}.
 
@@ -234,7 +237,7 @@ To analyze the walking duration between departures and rail transit stations in 
 	\caption{Process of Data Cleaning}
 	\label{fig:DataCleaning}
 	\centering
-	\fbox{\includegraphics[width=0.75\linewidth]{DataCleaning}}
+	\fbox{\includegraphics[width=0.6\linewidth]{DataCleaning}}
 \end{figure}
 
 %
@@ -245,7 +248,7 @@ Figure \ref{fig:AgeDistribution} shows the age distribution for walking trips to
 	\caption{The Age Distribution of Passengers}
 	\label{fig:AgeDistribution}
 	\centering
-	\fbox{\includegraphics[width=0.75\linewidth]{AgeDistribution}}
+	\fbox{\includegraphics[width=0.6\linewidth]{AgeDistribution}}
 \end{figure}
 
 %
@@ -253,7 +256,7 @@ Figure \ref{fig:AgeDistribution} shows the age distribution for walking trips to
 	\caption{Distribution of Walking Duration}
 	\label{fig:DurationDistribution}
 	\centering
-	\fbox{\includegraphics[width=0.75\linewidth]{DurationDistribution}}
+	\fbox{\includegraphics[width=0.6\linewidth]{DurationDistribution}}
 \end{figure}
 
 \subsection{Data preprocessing}
@@ -276,18 +279,18 @@ The feature of trip purpose has 15 subcategories in the original dataset, this s
 	\renewcommand{\arraystretch}{1.25}
 	\begin{tabular}{ccrrccccccc}
 		\toprule
-		Features & Categories & Count & Proportion & Mean & Std & 10th & 25th & 50th & 75th & 90th\\
+		Features & Categories & Count & Prop & Mean & Std & 10th & 25th & 50th & 75th & 90th\\
 		\midrule
 		& Total    & 4254  & - & 8.32  & 4.63  & 3     & 5     & 8     & 10    & 15 \\
 		\midrule
 		%
 		\multicolumn{1}{c}{Sex}
-		& male     & 2257  & 53.1\%    & 8.41  & 4.63  & 3     & 5     & 8     & 10    & 15 \\
-		& female   & 1996  & 46.90\%   & 8.22  & 4.63  & 3     & 5     & 7     & 10    & 15 \\
+		& Male     & 2257  & 53.1\%    & 8.41  & 4.63  & 3     & 5     & 8     & 10    & 15 \\
+		& Female   & 1996  & 46.90\%   & 8.22  & 4.63  & 3     & 5     & 7     & 10    & 15 \\
 		\midrule
 		%
 		\multicolumn{1}{c}{Peak hour}
-		& peak     & 2976  & 70.00\%   & 8.51  & 4.66  & 3     & 5     & 8     & 10    & 15 \\
+		& Peak     & 2976  & 70.00\%   & 8.51  & 4.66  & 3     & 5     & 8     & 10    & 15 \\
 		& Off peak & 1277  & 30.00\%   & 7.88  & 4.52  & 3     & 5     & 7     & 10    & 15 \\
 		\midrule
 		%
@@ -299,19 +302,19 @@ The feature of trip purpose has 15 subcategories in the original dataset, this s
 		\midrule
 		%
 		\multicolumn{1}{c}{Occupation}
-		& service  & 1256  & 29.50\%   & 8.32  & 4.57  & 3     & 5     & 8     & 10    & 15 \\
-		& tech     & 721   & 17.00\%   & 8.58  & 4.89  & 3     & 5     & 8     & 10    & 15 \\
-		& office   & 1076  & 25.30\%   & 8.44  & 4.48  & 4     & 5     & 8     & 10    & 15 \\
-		& student  & 325   &  7.60\%   & 8.12  & 4.73  & 3     & 5     & 7     & 10    & 15 \\
-		& null     & 875   & 20.60\%   & 8.03  & 4.62  & 3     & 5     & 7     & 10    & 15 \\
+		& Service  & 1256  & 29.50\%   & 8.32  & 4.57  & 3     & 5     & 8     & 10    & 15 \\
+		& Tech     & 721   & 17.00\%   & 8.58  & 4.89  & 3     & 5     & 8     & 10    & 15 \\
+		& Office   & 1076  & 25.30\%   & 8.44  & 4.48  & 4     & 5     & 8     & 10    & 15 \\
+		& Student  & 325   &  7.60\%   & 8.12  & 4.73  & 3     & 5     & 7     & 10    & 15 \\
+		& Null     & 875   & 20.60\%   & 8.03  & 4.62  & 3     & 5     & 7     & 10    & 15 \\
 		\midrule
 		%
 		\multicolumn{1}{c}{Purpose}
-		& going to work   & 2697  & 63.40\% & 8.69  & 4.51  & 4     & 5     & 9     & 10    & 15 \\
-		& going to school & 287   &  6.70\% & 8.19  & 4.6   & 3     & 5     & 8     & 10    & 15 \\
-		& business   & 153   &  3.60\% & 7.1   & 5.05  & 2     & 3     & 5     & 10    & 15 \\
-		& private purpose     & 789   & 18.60\% & 7.82  & 4.78  & 3     & 5     & 7     & 10    & 15 \\
-		& going home          & 327   &  7.70\% & 7.17  & 4.67  & 2     & 5     & 5     & 10    & 15 \\
+		& Going to work   & 2697  & 63.40\% & 8.69  & 4.51  & 4     & 5     & 9     & 10    & 15 \\
+		& Going to school & 287   &  6.70\% & 8.19  & 4.6   & 3     & 5     & 8     & 10    & 15 \\
+		& Business   & 153   &  3.60\% & 7.1   & 5.05  & 2     & 3     & 5     & 10    & 15 \\
+		& Private purpose     & 789   & 18.60\% & 7.82  & 4.78  & 3     & 5     & 7     & 10    & 15 \\
+		& Going home          & 327   &  7.70\% & 7.17  & 4.67  & 2     & 5     & 5     & 10    & 15 \\
 		%
 		\bottomrule
 	\end{tabular}
@@ -346,14 +349,14 @@ P(Y^T_i=1 \mid X_i)=F(X_i)
 \end{enumerate}
 
 %
-Since the question has been converted into a binary classification problem, for which the models of decision tree, Bayesian, support vector machine (SVM), logistic regression, and neural network are widely adopted. In this study, limited by the volume of sample, also the unknown internal relationship among features, the decision tree model should be a good choice because of the good generalization for different forms of data. Furthermore, to avoid the structure of tree from being too complicated, and to improve the robustness of model, this study will use an improved model of decision tree, the random forest model, to train and test the sample. Random forests model is an extension and improvement for the decision tree model, it is operated by constructing a multitude of decision trees and randomly selecting the features at training time \cite{ho1995random,ho1998random}. The structure is presented in Figure \ref{fig:RandomForests}. For the random forest model, the prediction is not obtained from the only one decision tree but the multitude of decision trees constructed by random selection of features and samples. In addition, to improve the efficiency and accuracy of the model, and reduce the number of invalid branches in the model, it is also necessary to filter the invalid features before estimating the model.
+Since the question has been converted into a binary classification problem, for which the models of decision tree, Bayesian, support vector machine (SVM), logistic regression, and neural network are widely adopted. In this study, limited by the volume of sample, also the unknown internal relationship among features, the decision tree model should be a good choice because of the good generalization for different forms of data. Furthermore, to avoid the structure of tree from being too complicated, and to improve the robustness of model, this study will use an improved model of decision tree, the random forest model, to train and test the sample. Random forests model is an extension and improvement for the decision tree model, it is operated by constructing a multitude of decision trees and randomly selecting the features at training time \cite{ho1995random,ho1998random}. The structure is presented in Figure \ref{fig:RandomForests}. For the random forest model, the prediction is not obtained from the only one decision tree, but the multitude of decision trees constructed by random selection of features and samples. In addition, to improve the efficiency and accuracy of the model, and reduce the number of invalid branches in the model, it is also necessary to filter the invalid features before estimating the model.
 
 %
 \begin{figure}[h]
 	\caption{Prediction Process in Random Forests Model}
 	\label{fig:RandomForests}
 	\centering
-	\fbox{\includegraphics[width=0.75\linewidth]{RandomForests}}
+	\fbox{\includegraphics[width=0.6\linewidth]{RandomForests}}
 \end{figure}
 
 %
@@ -374,12 +377,12 @@ According to the achievements from previous studies, the walking distance to rai
 	\begin{tabular}{llllll}
 		\toprule
 		\multicolumn{2}{c}{5 min threshold} & \multicolumn{2}{c}{8 min threshold} & \multicolumn{2}{c}{13 min threshold} \\
+		Features & Effect $^1$ & Features & Effect & Features & Effect \\
 		\midrule
-		Features & Effect* & Features & Effect* & Features & Effect* \\
 		Age over 65 & L	& Female & M & Age 45-64 & M \\
 		Peak hour & M & Age 25-44 & M & Peak hour & M \\
-		O\_Null	& L	& Peak hour	& M	& P\_commuting to work & M \\
-		P\_commuting to work & M	& P\_commuting to work  & M	& P\_ private purpose & L \\
+		O\_Null	$^2$ & L	& Peak hour	& M	& P\_commuting to work & M \\
+		P\_commuting to work $^3$ & M	& P\_commuting to work  & M	& P\_ private purpose & L \\
 		P\_official business & L & P\_official business	& L	& & \\
 		P\_private purpose & L & P\_ private purpose	& L & & \\
 		P\_going home & L & P\_ going home & L & &   \\
@@ -388,12 +391,15 @@ According to the achievements from previous studies, the walking distance to rai
 	\normalsize
 	%
 	\begin{description}
-		\item[*Note:] L means the individual with this feature tend to walk longer than the given threshold of walking duration, while M is the opposite meaning.
+		\small
+		\item[$^1$] L means the individual with this feature tend to walk longer than the given threshold of walking duration, while M is the opposite meaning.
+		\item[$^2$] is abbreviated from occupation.
+		\item[$^3$] is abbreviated from purpose.
 	\end{description}
 \end{table}
 
 %
-From the result in Table \ref{table:ValidFeatures}, travel purpose is the most important factor in determining the walking durations at all the 3 thresholds. The feature of peak hour is also significant in explaining the walking duration. People tend to walk a longer time to stations at peak hours, while people with private purpose or on the way going home are not willing to choose a stations far away. For the details of each threshold, at the threshold of 5 minutes, the features of trip purposes and peak hour play the most important role in determining the willingness of walking duration, where the unemployed people and the elderly people tend to walk less than 5 minutes to stations. As to the threshold of 8 minutes, the importance of age and gender raised in some extent, where people whose age is between 25 and 44 are unwilling to walk more than 8 minutes. Moreover, the middle-aged people tend to walk longer than other groups, where people aged from 45 to 64 can accept walking more than 13 minutes to stations more easily. 
+From the result in Table \ref{table:ValidFeatures}, travel purpose is the most important factor in determining the walking durations at all the 3 thresholds. The feature of peak hour is also significant in explaining the walking duration. People tend to walk a longer time to stations at peak hours, while people with private purpose or on the way going home are not willing to choose a station far away. For the details of each threshold, at the threshold of 5 minutes, the features of trip purposes and peak hour play the most important role in determining the willingness of walking duration, where the unemployed people and the elderly people tend to walk less than 5 minutes to stations. As to the threshold of 8 minutes, the importance of age and gender raised in some extent, where people whose age is between 25 and 44 are unwilling to walk more than 8 minutes. Moreover, the middle-aged people tend to walk longer than other groups, where people aged from 45 to 64 can accept walking more than 13 minutes to stations more easily. 
 
 % 
 This result of feature selection is also consistent with common sense and partly confirmed by the previous research. Most of the surveyed walking durations distribute around the average walking duration of 8 minutes, it can be considered that walking duration between 5 and 13 minutes is sensitive to individual characteristics. The walking duration more than 13 minutes is not accepted by most people even if they have different individual characteristics, and the threshold less than 5 minutes is also not sensitive to individual characteristics since the 5 minutes threshold is generally accepted by most passengers.
@@ -403,15 +409,16 @@ This result of feature selection is also consistent with common sense and partly
 The valid features (Table \ref{table:ValidFeatures}) are used in the random forest model to estimate the probability that walking longer than the given threshold of walking duration. For estimating the model, the dataset is divided into two parts, 50\% of the sample are used for fitting the model thus obtaining the coefficients, the rest 50\% are used for testing the ability of prediction. The dependent variable at the given threshold of walking duration to rail transit stations is calculated by Equation \ref{eq:threshold} based on the mean prediction.
 
 %
-The accuracy of results are evaluated by using the method of simple moving average. Figure \ref{fig:PredictionTrendLine} is the trend line of probabilities that walking less than the given threshold. The trend line of the surveyed values based on the test set is calculated by the mean probability of a group people who have close predicted values. The trend line is drawn by a descending order of predicted values. From the comparison of predicted values and surveyed values, it can be known that the prediction at the threshold of 5 minutes has the best fitness, and the prediction for the threshold of 13 minutes is also slightly good, while it is not so good in the case of 8 minutes. In fact, if checking the prediction for individuals, the accuracy of this model is still not enough to explain the individual behavior. But the trend line in Figure \ref{fig:PredictionTrendLine} infers that this result can reflect the behavior of people with specific individual characteristics at a given threshold of walking duration. 
+The accuracy of results is evaluated by using the method of simple moving average. Figure \ref{fig:PredictionTrendLine} is the trend line of probabilities that walking less than the given threshold. The trend line of the surveyed values based on the test set is calculated by the mean probability of a group people who have close predicted values. The trend line is drawn by a descending order of predicted values. From the comparison of predicted values and surveyed values, it can be known that the prediction at the threshold of 5 minutes has the best fitness, and the prediction for the threshold of 13 minutes is also slightly good, while it is not so good in the case of 8 minutes. In fact, if checking the prediction for individuals, the accuracy of this model is still not enough to explain the individual behavior. But the trend line in Figure \ref{fig:PredictionTrendLine} infers that this result can reflect the behavior of people with specific individual characteristics at a given threshold of walking duration. 
 
+%
 \begin{figure}[h]
-	\caption{Trend Line of Prediction and Test Set}
+	\caption{Trend Line of Prediction and Test Set: (a) is the trend line of prediction result and test set at the threshold of 5 minutes; (b) is the trend line of prediction result and test set at the threshold of 8 minutes, (c) is the trend line of prediction result and test set at the threshold of 13 minutes}
 	\label{fig:PredictionTrendLine}
 	\centering
-	\includegraphics[width=0.6\linewidth]{Prediction5Min}\\
-	\includegraphics[width=0.6\linewidth]{Prediction8Min}\\
-	\includegraphics[width=0.6\linewidth]{Prediction13Min}\\
+	\includegraphics[width=0.5\linewidth]{Prediction5Min}\\
+	\includegraphics[width=0.5\linewidth]{Prediction8Min}\\
+	\includegraphics[width=0.5\linewidth]{Prediction13Min}\\
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -421,10 +428,10 @@ The accuracy of results are evaluated by using the method of simple moving avera
 This study regarded surveyed walking duration as the reflection of willingness on walking duration rather than the distance between departures and transit stations. From this perspective the present study investigated the prevalence of walking duration with respect to the individual characteristics. This study established the quantitative correlation between walking duration and individual characteristics, also provided a general perspective for estimating the factor influencing walking duration. The approach and results are expected can be used in estimating or planning the catchment area of public rail transit, which is also considered as the foundation for predicting transit ridership \cite{guerra2013half}.
 
 % 
-Viewing from the process of problem conversion, the data in this study is obtained from a factual investigation but not a willingness survey, which means that once people have made a decision of walking to rail transit stations, the walking duration is just representation of the location of departures and the walking speed. It is hard to say whether the individual characteristics affected the walking durations, maybe due to this reason few existing studies can explain the relevance between walking duration and individual characteristics quantitatively correctly \cite{krygsman2004multimodal,levtnson1997density,daniels2013explaining}. In this study, the surveyed walking duration is regarded as reflection of the willingness on walking duration, thus it should relate to people's individual characteristics. On the base of assumption $A3$, the behavior that a passenger chose to walk to a station means this passenger can accept the walking duration from the departure to that station. From assumption $A1$ and $A2$, if the passenger who accepted the given threshold of walking duration shows significant differences in individual characteristics, it means they have a different acceptability of walking duration with the others.
+Viewing from the process of problem conversion, the data in this study is obtained from a factual investigation but not a willingness survey, which means that once people have made a decision of walking to rail transit stations, the walking duration is just representation of the location of departures and the walking speed. It is hard to say whether the individual characteristics affected the walking durations, maybe due to this reason few existing studies can explain the relevance between walking duration and individual characteristics quantitatively correctly \cite{krygsman2004multimodal,levinson1997density,daniels2013explaining}. In this study, the surveyed walking duration is regarded as reflection of the willingness on walking duration, thus it should relate to people's individual characteristics. On the base of assumption $A3$, the behavior that a passenger chose to walk to a station means this passenger can accept the walking duration from the departure to that station. From assumption $A1$ and $A2$, if the passenger who accepted the given threshold of walking duration shows significant differences in individual characteristics, it means they have a different acceptability of walking duration with the others.
 
 %
-As explained above, this study examined the differences in individual characteristics of which people who accepted the given thresholds of walking duration. As the results, people with different individual characteristics shows different acceptability at each threshold of walking duration. According to the evaluation from the method of simple moving average, the model of 5 minutes’ threshold has a better explanatory ability, the model of 13 minutes' threshold is a little weaker, and the model of 8 minutes' threshold is not good. Possible expectations for these results are as follows. The selected thresholds of walking duration 5, 8, 13 minutes represent the lower boundary, mean value, and upper boundary of the main distribution of walking durations respectively. The commonly acceptable walking durations range from 5 to 13 minutes, therefore, it can be inferred that people who prefer walking less than 5 minutes and who can accept walking longer than 13 minutes may have significant features. However, since the mean value of walking duration is about 8 minutes, which means that most of the walking durations distributes around 8 minutes, for passengers there may be some randomness in making the decision of whether walking to rail transit stations. For the other threshold values near the mean value of 8 minutes, it also can be inferred that people may have some ambiguity in choosing whether to walk to stations or not. This explanation can also be confirmed by the result of valid features selection. There are 5 identical features in both thresholds of 5 and 8 minutes, which means people with those features are not sensitive to the threshold from 5 to 8 minutes.
+As explained above, this study examined the differences in individual characteristics of which people who accepted the given thresholds of walking duration. As the results, people with different individual characteristics shows different acceptability at each threshold of walking duration. According to the evaluation from the method of simple moving average, the model of 5 minutes’ threshold has a better explanatory ability, the model of 13 minutes' threshold is a little weaker, and the model of 8 minutes' threshold is not good. Possible expectations for these results are as follows. The selected thresholds of walking duration 5, 8, 13 minutes represent the lower boundary, mean value, and upper boundary of the main distribution of walking durations respectively. The commonly acceptable walking durations range from 5 to 13 minutes; therefore, it can be inferred that people who prefer walking less than 5 minutes and who can accept walking longer than 13 minutes may have significant features. However, since the mean value of walking duration is about 8 minutes, which means that most of the walking durations distributes around 8 minutes, for passengers there may be some randomness in making the decision of whether walking to rail transit stations. For the other threshold values near the mean value of 8 minutes, it also can be inferred that people may have some ambiguity in choosing whether to walk to stations or not. This explanation can also be confirmed by the result of valid features selection. There are 5 identical features in both thresholds of 5 and 8 minutes, which means people with those features are not sensitive to the threshold from 5 to 8 minutes.
 
 %
 Although the clear relationship between walking duration/distance and explanatory variables is rarely confirmed in the previous research, travel purpose was assumed to be one of the most important factors influencing walking duration \cite{krygsman2004multimodal,yang2012walking}. Significance discrepancy with respect to travel purpose is also confirmed in some descriptive analysis \cite{burke2007distances,hoback2008true}. According to the findings in this study, walking for private purpose, such as reaction and shopping, tends to be longer than that for work purpose, this finding is also supported by other research \cite{yang2012walking}. The dummy variable of peak hour is also assumed to be one of the important factor influencing walking duration to transit stations, however, significant effect was not confirmed in previous research \cite{daniels2013explaining,krygsman2004multimodal}. This study found that passengers have an inclination of taking a shorter time to walk to stations during peak hours. A possible explanation for this result may be the tension in time, for which even if the acceptable walking duration has not changed for a passenger, the acceptable walking duration is supposed to become shorter. This explanation also can be mutually verified by the effect of travel purpose obtained in this study. Since peak hour commonly covers the trip with the purpose of work, passengers with the travel purpose of work are willing to get to stations faster as well. Moreover, this study also indicates that different age groups have different willingness on walking duration to transit stations, passengers aged from 25 to 44, which is in the range of productive age, tend to walk a shorter time to stations. This finding also can be supported by the effect of travel purpose and peak hour obtained in this study.
@@ -445,16 +452,15 @@ This study is the first step to explore the relationship between walking duratio
 % \supplementary{The following are available at \linksupplementary, Figure S1: title, Table S1: title, Video S1: title. A supporting video article is available at doi: link.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. The following statements should be used ``Conceptualization, X.X. and Y.Y.; Methodology, X.X.; Software, X.X.; Validation, X.X., Y.Y. and Z.Z.; Formal Analysis, X.X.; Investigation, X.X.; Resources, X.X.; Data Curation, X.X.; Writing—Original Draft Preparation, X.X.; Writing—Review \& Editing, X.X.; Visualization, X.X.; Supervision, X.X.; Project Administration, X.X.; Funding Acquisition, Y.Y.'', please turn to the \href{http://img.mdpi.org/data/contributor-role-instruction.pdf}{CRediT taxonomy} for the term explanation. Authorship must be limited to those who have contributed substantially to the work reported. }
+\authorcontributions{Qi Chen conceived and designed the research framework, analyzed the data, and developed the method. Go Higuchi provided support in data curation. Siting Chen wrote parts of the original draft and revised the whole paper. Shichen Zhao provided all the resource necessary during the research and had been controlling the research direction all along.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\funding{Please add: ``This research received no external funding'' or ``This research was funded by [name of funder] grant number [xxx].'' Check carefully that the details given are accurate and use the standard spelling of funding agency names at \url{https://search.crossref.org/funding}, any errors may affect your future funding.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g. materials used for experiments).}
+\acknowledgments{This study is finished during the author's doctoral period, the financial support from China Scholarship Council (CSC) is gratefully acknowledged.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\conflictsofinterest{Declare conflicts of interest or state ``The authors declare no conflict of interest.'' Authors must identify and declare any personal circumstances or interest that may be perceived as inappropriately influencing the representation or interpretation of reported research results. Any role of the funding sponsors in the design of the study; in the collection, analyses or interpretation of data; in the writing of the manuscript, or in the decision to publish the results must be declared in this section. If there is no role, please state ``The founding sponsors had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript, and in the decision to publish the results''.} 
+\conflictsofinterest{The author declares no conflict of interest.} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -493,7 +499,7 @@ This study is the first step to explore the relationship between walking duratio
 	Burke, M., Brown, A., et~al.\@ (2007).
 	\newblock ``Distances people walk for transport.''\ {\em Road \& Transport
 		Research: A Journal of Australian and New Zealand Research and Practice},
-	16(3), 16.
+	16(3), 16-29.
 	
 	\bibitem[\protect\citeauthoryear{}{Cardozo
 		et~al.\@}{2012}]{cardozo2012application}
@@ -572,9 +578,9 @@ This study is the first step to explore the relationship between walking duratio
 	\newblock ``Beyond the quarter mile: re-examining travel distances by active
 	transportation.''\ {\em Canadian Journal of Urban Research}, 19(1), 70--88.
 	
-	\bibitem[\protect\citeauthoryear{}{LEVTNSON and
-		Kumar}{1997}]{levtnson1997density}
-	LEVTNSON, D.~M. and Kumar, A. (1997).
+	\bibitem[\protect\citeauthoryear{}{Levinson and
+		Kumar}{1997}]{levinson1997density}
+	Levinson, D.~M. and Kumar, A. (1997).
 	\newblock ``Density and the journey to work.''\ {\em Growth and change}, 28(2),
 	147--172.
 	
@@ -644,7 +650,7 @@ This study is the first step to explore the relationship between walking duratio
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% optional
-\sampleavailability{}
+% \sampleavailability{}
 
 %% for journal Sci
 %\reviewreports{\\
